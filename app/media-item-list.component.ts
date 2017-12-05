@@ -10,7 +10,7 @@ import { MediaItemService } from './media-item.service';
 export class MediaItemListComponent {
   mediaItems;
 
-  constructor(private mediaItemService: MediaItemService ) {}
+  constructor(private mediaItemService: MediaItemService) {}
 
   ngOnInit() {
     this.mediaItems = this.mediaItemService.get();
