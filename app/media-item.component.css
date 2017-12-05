@@ -7,6 +7,7 @@
   background-color: #29394b;
   padding: 10px;
   color: #bdc2c5;
+  margin: 10px;
 }
 h2 {
   font-size: 1.6em;
@@ -39,7 +40,7 @@ h2 {
     fill: #37ad79;
 }
 .favorite.is-favorite-hovering {
-    fill: #45bf94;
+    fill: #ec4342;
 }
 .favorite.is-favorite.is-favorite-hovering {
     fill: #ec4342;
