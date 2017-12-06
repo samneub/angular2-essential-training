@@ -1,8 +1,8 @@
 :host {
   display: flex;
   flex-direction: column;
-  width: 140px;
-  height: 200px;
+  width: 200px;
+  height: 250px;
   border: 2px solid;
   background-color: #29394b;
   padding: 10px;

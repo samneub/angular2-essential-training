@@ -16,3 +16,14 @@ section > header > h1 {
 section > header .description {
   font-style: italic;
 }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #53ace4;
+  padding: 10px;
+}
+
+nav > a {
+  padding: 5px;
+} 

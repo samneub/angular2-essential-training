@@ -25,4 +25,9 @@ export class MediaItemService {
     return this.http.delete(`mediaitems/${mediaItem.id}`)
       .map(response => {});
   }
+
+  update(mediaItem) {
+    return this.http.put('mediaitems', mediaItem)
+      .map(response => {});
+  }
 }

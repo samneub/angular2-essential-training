@@ -42,6 +42,11 @@ export class MockXHRBackend {
           this._mediaItems.push(mediaItem);
           responseOptions = new ResponseOptions({ status: 201 });
           break;
+        case RequestMethod.Put:
+          var mediaItem = JSON.parse(request.text().toString());
+          this._updateMediaItem(mediaItem);
+          responseOptions = new ResponseOptions({ status: 200 });
+          break;
         case RequestMethod.Delete:
           var id = parseInt(request.url.split('/')[1]);
           this._deleteMediaItem(id);
@@ -54,6 +59,11 @@ export class MockXHRBackend {
       return () => { };
     });
     return { response };
+  }
+
+  _updateMediaItem(mediaItem) {
+    var oldMediaItem = this._mediaItems.find(oldMediaItem => oldMediaItem.id === mediaItem.id);
+    oldMediaItem.isFavorite = mediaItem.isFavorite;
   }
 
   _deleteMediaItem(id) {
